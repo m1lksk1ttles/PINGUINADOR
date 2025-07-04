@@ -21,7 +21,7 @@ while True:
         break
 
     try:
-        results = model(frame)[0]
+        results = model(frame, conf=0.8)[0]
         
         detections = sv.Detections.from_ultralytics(results)
 
